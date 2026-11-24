@@ -1,0 +1,219 @@
+/* --- Estilos Globales con la Nueva Paleta --- */
+:root {
+    /* Fondos (imagen 2) */
+    --color-bg-body: #FFFBD4;
+    --color-bg-content: #F6FFD4;
+    
+    /* Menu / Navbar (imagen 2 - verde oliva) */
+    --color-navbar: #A9BD92;
+    --color-navbar-dark: #93BD92;
+    --color-navbar-light: #BDBC92;
+    
+    /* Tarjetas / Bloques (imagen 2) */
+    --color-card-bg: #D8CBC8;
+    --color-card-bg-alt: #F8DBBF;
+    --color-card-border: #D8D3C8;
+    
+    /* Texto (imagen 1) */
+    --color-text-title: #340D41;
+    --color-text-body: #410D34;
+    --color-text-dark: #410D1A;
+    
+    /* Detalles (imagen 1) */
+    --color-detail-magenta: #D10D78;
+    --color-detail-pink: #F07AD1;
+    --color-detail-rose: #F07A95;
+    --color-detail-peach: #F0997A;
+    
+    /* Botones / Formularios / Fondos Vacíos (imagen 1) */
+    --color-btn-pink: #FCD1FB;
+    --color-btn-soft: #FCD1E5;
+    --color-btn-peach: #FCD2D1;
+    --color-cyan-light: #B4E4DF;
+    --color-blue-light: #B4D1E4;
+    --color-purple-light: #B4B9E4;
+    
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg-body); /* Fondo crema suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Marco del Navegador --- */
+.browser-frame {
+    width: 900px;
+    max-width: 100%;
+    background-color: var(--color-bg-content);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(52, 13, 65, 0.15);
+    overflow: hidden;
+    border: 1px solid var(--color-card-border);
+}
+
+.browser-frame::before {
+    content: "";
+    display: block;
+    height: 30px;
+    background-color: var(--color-card-bg);
+    border-bottom: 1px solid var(--color-card-border);
+    /* Botones simular ventana */
+    background-image: radial-gradient(circle, var(--color-detail-magenta) 6px, transparent 7px),
+                      radial-gradient(circle, var(--color-detail-pink) 6px, transparent 7px),
+                      radial-gradient(circle, var(--color-cyan-light) 6px, transparent 7px);
+    background-position: 10px 50%, 30px 50%, 50px 50%;
+    background-repeat: no-repeat;
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: var(--color-navbar);
+    color: var(--color-text-title);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-detail-magenta);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: var(--color-detail-magenta);
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-title);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-text-title);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    background-color: var(--color-btn-pink);
+    color: var(--color-text-title);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Main --- */
+.site-main {
+    display: flex;
+    padding: 40px 30px;
+    gap: 40px;
+    background-color: var(--color-bg-content);
+}
+
+/* Sección principal */
+.content-section {
+    flex: 2;
+    border: 2px solid var(--color-detail-magenta);
+    border-radius: 8px;
+    padding: 25px;
+    background-color: var(--color-card-bg);
+    box-shadow: 4px 4px 0px var(--color-detail-rose);
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: var(--color-text-title);
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--color-text-body);
+}
+
+.media-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-image {
+    max-width: 100%;
+    border-radius: 6px;
+    border: 2px solid var(--color-card-border);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Barra lateral */
+.sidebar {
+    flex: 1;
+    border: 2px solid var(--color-detail-pink);
+    border-radius: 8px;
+    padding: 25px;
+    background-color: var(--color-card-bg-alt);
+    box-shadow: 4px 4px 0px var(--color-detail-peach);
+}
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    color: var(--color-text-title);
+    margin-bottom: 15px;
+}
+
+.sidebar > ul {
+    list-style-position: inside;
+    margin-bottom: 20px;
+    color: var(--color-text-body);
+}
+
+.sidebar > ul li {
+    margin-bottom: 10px;
+}
+
+.info-box {
+    text-align: center;
+    border-top: 1px dashed var(--color-detail-rose);
+    padding-top: 15px;
+}
+
+.globe-icon {
+    font-size: 2.5rem;
+    color: var(--color-detail-magenta);
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--color-btn-pink);
+    color: var(--color-text-title);
+    text-align: center;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--color-detail-magenta);
+}
