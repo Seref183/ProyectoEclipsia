@@ -47,8 +47,9 @@ body {
     background-color: var(--color-bg-body); /* Fondo crema suave */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
+    padding: 20px 10px;
 }
 
 /* --- Marco del Navegador --- */
@@ -80,10 +81,12 @@ body {
 .site-header {
     background-color: var(--color-navbar);
     color: var(--color-text-title);
-    padding: 15px 30px;
+    padding: 15px 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     border-bottom: 3px solid var(--color-detail-magenta);
 }
 
@@ -107,22 +110,38 @@ body {
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
 }
 
 .main-nav a {
     text-decoration: none;
     color: var(--color-text-title);
     font-weight: 600;
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 6px;
+    font-size: 0.85rem;
     transition: all 0.3s ease;
+}
+
+.btn-menu-contacto {
+    background-color: var(--color-card-bg-alt);
+    border: 1px solid var(--color-detail-rose);
+}
+
+.btn-menu-registro {
+    background-color: var(--color-btn-peach);
+}
+
+.btn-menu-login {
+    background-color: var(--color-btn-pink);
 }
 
 .main-nav a.active,
 .main-nav a:hover {
-    background-color: var(--color-btn-pink);
-    color: var(--color-text-title);
+    background-color: var(--color-detail-magenta);
+    color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -163,57 +182,22 @@ body {
 
 .main-image {
     max-width: 100%;
+    height: auto;
     border-radius: 6px;
     border: 2px solid var(--color-card-border);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Barra lateral */
-.sidebar {
-    flex: 1;
-    border: 2px solid var(--color-detail-pink);
-    border-radius: 8px;
-    padding: 25px;
-    background-color: var(--color-card-bg-alt);
-    box-shadow: 4px 4px 0px var(--color-detail-peach);
+/* --- Control de Vistas (:target) --- */
+.panel-seccion {
+    display: none;
+    width: 100%;
 }
 
-.sidebar h3 {
-    font-size: 1.5rem;
-    color: var(--color-text-title);
-    margin-bottom: 15px;
-}
-
-.sidebar > ul {
-    list-style-position: inside;
-    margin-bottom: 20px;
-    color: var(--color-text-body);
-}
-
-.sidebar > ul li {
-    margin-bottom: 10px;
-}
-
-.info-box {
-    text-align: center;
-    border-top: 1px dashed var(--color-detail-rose);
-    padding-top: 15px;
-}
-
-.globe-icon {
-    font-size: 2.5rem;
-    color: var(--color-detail-magenta);
-    margin-bottom: 10px;
+body:not(:has(:target)) #panel-inicio {
     display: block;
 }
 
-/* --- Footer --- */
-.site-footer {
-    background-color: var(--color-btn-pink);
-    color: var(--color-text-title);
-    text-align: center;
-    padding: 20px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    border-top: 3px solid var(--color-detail-magenta);
-}
+body:has(#inicio:target) #panel-inicio { display: block; }
+body:has(#inicio:target) #panel-mayores,
+body:has(#inicio:target) #panel-
