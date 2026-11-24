@@ -1,0 +1,106 @@
+/* ==========================================
+   1. Variables y Reset Global
+   ========================================== */
+:root {
+    --primary-color: #fa9bfd;       /* Azul moderno */
+    --text-color: #45315c;          /* Gris oscuro para texto */
+    --text-muted: #5bd2e7;          /* Gris claro para subtítulos/footer */
+    --bg-color: #f3f4f6;            /* Fondo general sutil */
+    --gray: #cdf7c3;
+    --black: #0d0c0e;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   2. Encabezado (<header>)
+   ========================================== */
+header {
+    background-color: var(--primary-color);
+    color: var(--gray);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(164, 93, 223, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================
+   3. Navegación (<nav>)
+   ========================================== */
+nav {
+    background-color: var(--gray);
+    padding: 0.8rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #a1b9e9;
+    box-shadow: 0 1px 3px rgba(187, 128, 221, 0.05);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   4. Contenido Principal (<main>)
+   ========================================== */
+main {
+    flex: 1; /* Empuja el footer hacia abajo si la pantalla es alta */
+    max-width: 800px;
+    width: 90%;
+    margin: 2.5rem auto;
+    background-color: var(--gray);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+main h2 {
+    font-size: 1.75rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+main p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   5. Pie de página (<footer>)
+   ========================================== */
+footer {
+    background-color: var(--black);
+    border-top: 1px solid #ac83ec;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
