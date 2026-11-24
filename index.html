@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eclipsia - Tarot y Tienda</title>
-    <!-- Estilos centralizados en la carpeta CSS -->
     <link rel="stylesheet" href="CSS/layoutp.css">
 </head>
 <body>
@@ -31,7 +30,7 @@
 
         <main class="site-main">
             <section class="content-section">
-                
+
                 <!-- 1. PANTALLA DE INICIO -->
                 <div id="panel-inicio" class="panel-seccion">
                     <span id="inicio"></span>
@@ -44,20 +43,19 @@
                     <p>Selecciona una categoría en el menú superior para ver la información detallada.</p>
                 </div>
 
-
                 <!-- 2. PANTALLA DE ARCANOS MAYORES -->
                 <div id="panel-mayores" class="panel-seccion">
                     <span id="arcanom"></span>
                     <a href="#inicio" class="btn-regresar">← Volver al Inicio</a>
                     <h2>Catálogo de Arcanos Mayores</h2>
-                    
+
                     <form class="form-busqueda" action="#arcanom">
                         <input type="text" placeholder="Buscar por nombre o significado...">
                         <button type="submit" class="btn-buscar">Buscar</button>
                     </form>
 
                     <hr style="margin-bottom: 20px; border-color: var(--color-detail-rose);">
-                    
+
                     <div class="tarjeta-arcano">
                         <h4>El Loco (Núm: 0)</h4>
                         <p><strong>Significado:</strong> Nuevos comienzos, fe, libertad, espontaneidad e inocencia.</p>
@@ -77,20 +75,19 @@
                     </div>
                 </div>
 
-
                 <!-- 3. PANTALLA DE ARCANOS MENORES -->
                 <div id="panel-menores" class="panel-seccion">
                     <span id="arcanoe"></span>
                     <a href="#inicio" class="btn-regresar">← Volver al Inicio</a>
                     <h2>Catálogo de Arcanos Menores</h2>
-                    
+
                     <form class="form-busqueda" action="#arcanoe">
                         <input type="text" placeholder="Buscar por nombre, palo o significado...">
                         <button type="submit" class="btn-buscar">Buscar</button>
                     </form>
 
                     <hr style="margin-bottom: 20px; border-color: var(--color-detail-rose);">
-                    
+
                     <div class="tarjeta-arcano">
                         <h4>As de Bastos (Palo: Bastos)</h4>
                         <p><strong>Significado:</strong> Inspiración, nueva energía, pasión, potencial creativo y fuerza motora.</p>
@@ -106,203 +103,6 @@
                         <p><strong>Significado:</strong> Armonía familiar, felicidad plena, amor compartido y realización afectiva.</p>
                     </div>
                 </div>
-
-
-                <!-- 4. PANTALLA DE TIENDA -->
-                <div id="panel-tienda" class="panel-seccion">
-                    <span id="tiradas"></span>
-                    <a href="#inicio" class="btn-regresar">← Volver al Inicio</a>
-                    <h2>Tienda / Paquetes de Tiradas</h2>
-                    <hr style="margin-bottom: 20px; border-color: var(--color-detail-rose);">
-
-                    <div class="tarjeta-tienda">
-                        <h4>Tirada de Tres Cartas (Pasado, Presente, Futuro)</h4>
-                        <p><strong>Tipo:</strong> General | <strong>Cartas:</strong> 3</p>
-                        <p>Ideal para obtener un panorama claro sobre una situación específica o pregunta puntual.</p>
-                        <p class="precio">Precio: $250.00 MXN</p>
-                        <p><small>Disponibilidad: 10 cupos</small></p>
-                    </div>
-
-                    <div class="tarjeta-tienda">
-                        <h4>Tirada Astrológica Completa</h4>
-                        <p><strong>Tipo:</strong> Avanzada | <strong>Cartas:</strong> 12</p>
-                        <p>Lectura detallada enfocada en las 12 casas zodiacales para analizar todas las áreas de tu vida.</p>
-                        <p class="precio">Precio: $600.00 MXN</p>
-                        <p><small>Disponibilidad: 5 cupos</small></p>
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- BARRA LATERAL -->
-            <aside class="sidebar">
-                <h3>Más información</h3>
-                <ul>
-                    <li>Historia del Tarot</li>
-                    <li>Guía para principiantes</li>
-                    <li>Cómo funciona una lectura</li>
-                    <li>Cartas derechas e invertidas</li>
-                    <li>Tipos de preguntas</li>
-                </ul>
-                <div class="info-box">
-                    <span class="globe-icon">🃜🃚🃖🃁🂭🂺</span>
-                    <p>Adéntrate en el mundo místico del Tarot.</p>
-                </div>
-            </aside>
-        </main>
-
-        <footer class="site-footer">
-            <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
-        </footer>
-    </div>
-
-    <!-- Modales -->
-    <div id="modalRegistro" class="modal-overlay">
-        <div class="modal-content">
-            <a href="#" class="btn-cerrar">&times;</a>
-            <h2>Crear Cuenta</h2>
-            <form action="#">
-                <div class="campo"><label>Nuevo Usuario:</label><input type="text" name="usuario" required></div>
-                <div class="campo"><label>Contraseña:</label><input type="password" name="password" required></div>
-                <button type="submit" class="btn-accion">Registrarse</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="modalLogin" class="modal-overlay">
-        <div class="modal-content">
-            <a href="#" class="btn-cerrar">&times;</a>
-            <h2>Iniciar Sesión</h2>
-            <form action="#">
-                <div class="campo"><label>Usuario:</label><input type="text" name="usuario" required></div>
-                <div class="campo"><label>Contraseña:</label><input type="password" name="password" required></div>
-                <button type="submit" class="btn-accion">Entrar</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="modalContacto" class="modal-overlay">
-        <div class="modal-content" style="width: 400px;">
-            <a href="#" class="btn-cerrar">&times;</a>
-            <h2>Contáctanos</h2>
-            <form action="#">
-                <div class="campo"><label>Nombre:</label><input type="text" name="nombre" required></div>
-                <div class="campo"><label>Correo electrónico:</label><input type="email" name="email" required></div>
-                <div class="campo"><label>Mensaje:</label><textarea name="mensaje" rows="4" required></textarea></div>
-                <button type="submit" class="btn-accion">Enviar Mensaje</button>
-            </form>
-        </div>
-    </div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eclipsia - Tarot y Tienda</title>
-    <!-- Estilos centralizados en la carpeta CSS -->
-    <link rel="stylesheet" href="css/layoutp.css">
-</head>
-<body>
-
-    <div class="browser-frame">
-        <header class="site-header">
-            <div class="logo-container">
-                <span class="logo-icon">⛧⃝𓄃</span>
-                <h1 class="site-title">˚⊱Eclipsia⊰˚</h1>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#arcanom">Arcanos Mayores</a></li>
-                    <li><a href="#arcanoe">Arcanos Menores</a></li>
-                    <li><a href="#tiradas">Tienda</a></li>
-                    <li><a href="#modalContacto" class="btn-menu-contacto">Contacto</a></li>
-                    <li><a href="#modalRegistro" class="btn-menu-registro">Registro</a></li>
-                    <li><a href="#modalLogin" class="btn-menu-login">Entrar</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="site-main">
-            <section class="content-section">
-                
-                <!-- 1. PANTALLA DE INICIO -->
-                <div id="panel-inicio" class="panel-seccion">
-                    <span id="inicio"></span>
-                    <h2>Explora el Tarot y la Tienda</h2>
-                    <p>Aprende sobre sus cartas, símbolos y adquiere tus lecturas profesionales.</p>
-
-                    <div class="media-container">
-                        <img src="img/tarot.png" alt="Laptop abierta sobre escritorio de madera" class="main-image">
-                    </div>
-                    <p>Selecciona una categoría en el menú superior para ver la información detallada.</p>
-                </div>
-
-
-                <!-- 2. PANTALLA DE ARCANOS MAYORES -->
-                <div id="panel-mayores" class="panel-seccion">
-                    <span id="arcanom"></span>
-                    <a href="#inicio" class="btn-regresar">← Volver al Inicio</a>
-                    <h2>Catálogo de Arcanos Mayores</h2>
-                    
-                    <form class="form-busqueda" action="#arcanom">
-                        <input type="text" placeholder="Buscar por nombre o significado...">
-                        <button type="submit" class="btn-buscar">Buscar</button>
-                    </form>
-
-                    <hr style="margin-bottom: 20px; border-color: var(--color-detail-rose);">
-                    
-                    <div class="tarjeta-arcano">
-                        <h4>El Loco (Núm: 0)</h4>
-                        <p><strong>Significado:</strong> Nuevos comienzos, fe, libertad, espontaneidad e inocencia.</p>
-                        <p><strong>Invertido:</strong> Imprudencia, riesgo innecesario, ingenuidad o apatía.</p>
-                    </div>
-
-                    <div class="tarjeta-arcano">
-                        <h4>El Mago (Núm: I)</h4>
-                        <p><strong>Significado:</strong> Manifestación, recursos, poder personal, habilidad y acción.</p>
-                        <p><strong>Invertido:</strong> Manipulación, talentos no aprovechados, engaño o dudas.</p>
-                    </div>
-
-                    <div class="tarjeta-arcano">
-                        <h4>La Sacerdotisa (Núm: II)</h4>
-                        <p><strong>Significado:</strong> Intuición, misterio, conocimiento interior y mente subconsciente.</p>
-                        <p><strong>Invertido:</strong> Secretos guardados, desconexión intuitiva o represión emocional.</p>
-                    </div>
-                </div>
-
-
-                <!-- 3. PANTALLA DE ARCANOS MENORES -->
-                <div id="panel-menores" class="panel-seccion">
-                    <span id="arcanoe"></span>
-                    <a href="#inicio" class="btn-regresar">← Volver al Inicio</a>
-                    <h2>Catálogo de Arcanos Menores</h2>
-                    
-                    <form class="form-busqueda" action="#arcanoe">
-                        <input type="text" placeholder="Buscar por nombre, palo o significado...">
-                        <button type="submit" class="btn-buscar">Buscar</button>
-                    </form>
-
-                    <hr style="margin-bottom: 20px; border-color: var(--color-detail-rose);">
-                    
-                    <div class="tarjeta-arcano">
-                        <h4>As de Bastos (Palo: Bastos)</h4>
-                        <p><strong>Significado:</strong> Inspiración, nueva energía, pasión, potencial creativo y fuerza motora.</p>
-                    </div>
-
-                    <div class="tarjeta-arcano">
-                        <h4>Tres de Espadas (Palo: Espadas)</h4>
-                        <p><strong>Significado:</strong> Dolor emocional, desamor, perdida necesaria y liberación mental.</p>
-                    </div>
-
-                    <div class="tarjeta-arcano">
-                        <h4>Diez de Copas (Palo: Copas)</h4>
-                        <p><strong>Significado:</strong> Armonía familiar, felicidad plena, amor compartido y realización afectiva.</p>
-                    </div>
-                </div>
-
 
                 <!-- 4. PANTALLA DE TIENDA -->
                 <div id="panel-tienda" class="panel-seccion">
